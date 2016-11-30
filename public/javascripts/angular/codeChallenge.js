@@ -38,6 +38,9 @@ app.config (function ($routeProvider, $locationProvider) {
 	}).when ("/matches", {
 
 		templateUrl: '../templates/views/matches.view.template.html'
+	}).otherwise ({
+
+		redirectTo : '/'
 	});
 
 	/**	TODO  **/
