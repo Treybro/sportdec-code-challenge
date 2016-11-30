@@ -4,6 +4,17 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         pkg: grunt.file.readJSON('package.json'),
+        watch: {
+            scripts: {
+
+                files: ['app/style/css/*.css'],
+                tasks: ['cssmin'],
+                options: {
+
+                    spawn: false,
+                },
+            },
+        },
         sass: {
             dist: {
                 files: {
@@ -25,6 +36,7 @@ module.exports = function(grunt) {
     });
 
     //  Tasks
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
