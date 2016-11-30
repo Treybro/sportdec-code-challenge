@@ -1,0 +1,13 @@
+<div class="jumbotron" ng-hide="$root.isAuthenticated">
+	<form class="form-signin" ng-submit="attemptLogin ()">
+		<h2 class="form-signin-heading">Please login below</h2>
+		<label for="inputEmail" class="sr-only">Username</label>
+		<input type="text" id="inputEmail" class="form-control" placeholder="Enter Username" required autofocus ng-model="user.username">
+		<label for="inputPassword" class="sr-only">Password</label>
+		<input type="password" id="inputPassword" class="form-control" placeholder="Enter Password" required ng-model="user.password">
+		<div class="form-group has-error">
+  			<span class="help-block" ng-bind="authenticationError"></span>
+		</div>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+	</form>
+</div>

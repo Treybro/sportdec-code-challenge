@@ -1,0 +1,28 @@
+doctype html
+html
+	head
+		base(href="/")
+		title= projectTitle
+		link(rel='stylesheet', href='/stylesheets/login.css')
+		link(rel='stylesheet', href='/stylesheets/matches.css')
+		link(rel='stylesheet', href='/bootstrap/css/bootstrap.min.css')
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.min.js')
+		script(src='../javascripts/angular/codeChallenge.js')
+		script(src='../javascripts/angular/services/authentication.service.js')
+		script(src='../javascripts/angular/services/resources.service.js')
+		script(src='../javascripts/angular/components/navbar.component.js')
+		script(src='../javascripts/angular/components/login.component.js')
+		script(src='../javascripts/angular/components/signup.component.js')
+		script(src='../javascripts/angular/components/welcome.component.js')
+		script(src='../javascripts/angular/components/info.component.js')
+		script(src='../javascripts/angular/components/latestmatch.component.js')
+		script(src='../javascripts/angular/components/matchdetails.component.js')
+		script(src='../javascripts/angular/components/infotab.component.js')
+		script(src='../javascripts/angular/components/team1tab.component.js')
+		script(src='../javascripts/angular/components/team2tab.component.js')
+		script(src='../javascripts/angular/components/eventstab.component.js')
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+		script(src='/bootstrap/js/bootstrap.min.js')
+	body(ng-app='mikesApp')
+		block content

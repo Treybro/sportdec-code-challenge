@@ -1,0 +1,12 @@
+<div class="jumbotron matches-jumbotron" ng-show="$root.isAuthenticated">
+	<h1 class="text-center">Latest Results</h1>
+	<div class="panel panel-default" ng-repeat="match in latestMatches | orderBy:'-date'">
+		<div class="panel-body">
+			<h3 class="text-center">{{match.name}}</h3>
+			<h4 class="text-center">{{match.team_data[0].score}} : {{match.team_data[1].score}}</h4>
+			<h4 class="text-center">{{match.date | date:'d/M/yy h:mm a'}}</h4>
+			<h4 class="text-center"><a data-toggle="collapse" data-target="#match-details-{{match._id}}" ng-click="viewMatchDetails (match)">Details</a></h4>
+			<mikes-match-details-component match-data="match" match-details-data="matchDetails"></mikes-match-details-component>
+		</div>
+	</div>
+</div>

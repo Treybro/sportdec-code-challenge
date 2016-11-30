@@ -1,0 +1,30 @@
+<div class="collapse" id="match-details-{{$ctrl.matchData._id}}">
+	<ul class="nav nav-tabs">
+		<li class="active">
+			<a toggle-tab="" data-toggle="tab" href="#match-details-{{$ctrl.matchData._id}}-info">Match Info</a>
+		</li>
+		<li>
+			<a toggle-tab="" data-toggle="tab" href="#match-details-{{$ctrl.matchData._id}}-events">Match Breakdown</a>
+		</li>
+		<li>
+			<a toggle-tab="" data-toggle="tab" href="#match-details-{{$ctrl.matchData._id}}-team1">{{$ctrl.matchDetailsData.team_data[0].name}}</a>
+		</li>
+		<li>
+			<a toggle-tab="" data-toggle="tab" href="#match-details-{{$ctrl.matchData._id}}-team2">{{$ctrl.matchDetailsData.team_data[1].name}}</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div id="match-details-{{$ctrl.matchData._id}}-info" class="tab-pane fade in active row">
+			<mikes-info-tab-component tab-match-data="$ctrl.matchData" tab-match-details-data="$ctrl.matchDetailsData"></mikes-info-tab-component>
+		</div>
+		<div id="match-details-{{$ctrl.matchData._id}}-events" class="tab-pane fade">
+			<mikes-events-tab-component tab-match-data="$ctrl.matchData" tab-match-details-data="$ctrl.matchDetailsData"></mikes-events-tab-component>
+		</div>
+		<div id="match-details-{{$ctrl.matchData._id}}-team1" class="tab-pane fade">
+			<mikes-team1-tab-component tab-match-data="$ctrl.matchData" tab-match-details-data="$ctrl.matchDetailsData"></mikes-team1-tab-component>
+		</div>
+		<div id="match-details-{{$ctrl.matchData._id}}-team2" class="tab-pane fade">
+			<mikes-team2-tab-component tab-match-data="$ctrl.matchData" tab-match-details-data="$ctrl.matchDetailsData"></mikes-team2-tab-component>
+		</div>
+	</div>
+</div>

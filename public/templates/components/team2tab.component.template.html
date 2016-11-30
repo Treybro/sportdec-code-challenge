@@ -1,0 +1,52 @@
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">Side</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.team_data[1].side}}</small>
+	</p>
+</div>
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">Score</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.team_data[1].score}}</small>
+	</p>
+</div>
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">Half Time Score</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.team_data[1].halfscore}}</small>
+	</p>
+</div>
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">Final Whistle Score</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.team_data[1].ninetyscore}}</small>
+	</p>
+</div>
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">Penalties Scored</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.team_data[1].shootoutscore}}</small>
+	</p>
+</div>
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">Penalty Results</small>
+		<br>
+		<span ng-repeat="penalty in $ctrl.tabMatchDetailsData.team_data[1].shootout track by $index">
+			<small>{{penalty}}</small>
+			<br>
+		</span>
+	</p>
+</div>
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">Squad</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.team_data[1].num_players}}</small>
+	</p>
+</div>

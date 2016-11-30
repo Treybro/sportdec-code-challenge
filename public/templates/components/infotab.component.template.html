@@ -1,0 +1,52 @@
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#439e4e">Winner</small>
+		<br>
+		<small ng-if="$ctrl.tabMatchDetailsData.match_winner == $ctrl.tabMatchDetailsData.team_data[0].teamref">{{$ctrl.tabMatchDetailsData.team_data[0].name}}</small>
+		<small ng-if="$ctrl.tabMatchDetailsData.match_winner == $ctrl.tabMatchDetailsData.team_data[1].teamref">{{$ctrl.tabMatchDetailsData.team_data[1].name}}</small>
+	</p>
+</div>
+<div class="col-md-3 col-md-offset-3">
+	<p class="text-center">
+		<small style="color:#f57d09">{{$ctrl.tabMatchDetailsData.team_data[0].name}}</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.team_data[0].score}}</small>
+	</p>
+</div>
+<div class="col-md-3">
+	<p class="text-center">
+		<small style="color:#f57d09">{{$ctrl.tabMatchDetailsData.team_data[1].name}}</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.team_data[1].score}}</small>
+	</p>
+</div>
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">{{$ctrl.tabMatchDetailsData.competition_name}}</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.round_name}} {{$ctrl.tabMatchDetailsData.round}}</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.pool}}</small>
+	</p>
+</div>
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">Location</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.venue_name}}, {{$ctrl.tabMatchDetailsData.city}}</small>
+	</p>
+</div>
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">Referee</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.referee}}</small>
+	</p>
+</div>
+<div class="col-md-12">
+	<p class="text-center">
+		<small style="color:#f57d09">Duration</small>
+		<br>
+		<small>{{$ctrl.tabMatchDetailsData.match_time}} mins</small>
+	</p>
+</div>
