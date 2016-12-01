@@ -1,46 +1,46 @@
-<div ng-repeat="event in $ctrl.tabMatchDetailsData.events | orderBy:'timestamp'">
+<div class="events" ng-repeat="event in $ctrl.tabMatchDetailsData.events | orderBy:'timestamp'">
 	<div class="row" ng-switch on="event.category">
 		<div class="col-md-12" ng-switch-when="period_change">
-			<p class="text-center" ng-if="event.value == 'first_half'">
+			<p ng-if="event.value == 'first_half'">
 				<small style="color:#f57d09">Kick Off</small>
 				<small>{{event.timestamp | date:'h:mm a'}}</small>
 			</p>
-			<p class="text-center" ng-if="event.value == 'half_time'">
+			<png-if="event.value == 'half_time'">
 				<small style="color:#f57d09">Half Time</small>
 				<small>{{event.timestamp | date:'h:mm a'}}</small>
 			</p>
-			<p class="text-center" ng-if="event.value == 'second_half'">
+			<p ng-if="event.value == 'second_half'">
 				<small style="color:#f57d09">Second Half</small>
 				<small>{{event.timestamp | date:'h:mm a'}}</small>
 			</p>
-			<p class="text-center" ng-if="event.value == '90_mins'">
+			<p ng-if="event.value == '90_mins'">
 				<small style="color:#f57d09">Final Whistle</small>
 				<small>{{event.timestamp | date:'h:mm a'}}</small>
 			</p>
 		</div>
 		<div class="col-md-12" ng-switch-when="goal">
-			<p class="text-center">
+			<p>
 				<small style="color:#439e4e">Goal</small>
 				<small>scored by {{event.label}}</small>
 				<small>@{{event.time}} min</small>
 			</p>
 		</div>
 		<div class="col-md-12" ng-switch-when="substitution_on">
-			<p class="text-center">
+			<p>
 				<small style="color:#439e4e">Sub On</small>
 				<small>{{event.label}}</small>
 				<small>@{{event.time}} min</small>
 			</p>
 		</div>
 		<div class="col-md-12" ng-switch-when="substitution_off">
-			<p class="text-center">
+			<p>
 				<small style="color:#d03020">Sub Off</small>
 				<small>{{event.label}}</small>
 				<small>@{{event.time}} min</small>
 			</p>
 		</div>
 		<div class="col-md-12" ng-switch-when="booking">
-			<p class="text-center">
+			<p>
 				<small style="color:#e9b739" ng-if="event.value == 'Yellow'">Yellow Card</small>
 				<small style="color:#d03020" ng-if="event.value == 'Red'">Red Card</small>
 				<small>{{event.label}}</small>
@@ -48,7 +48,7 @@
 			</p>
 		</div>
 		<div class="col-md-12" ng-switch-when="penaltyshot">
-			<p class="text-center">
+			<p>
 				<small style="color:#d03020" ng-if="event.value == 'Missed'">Penalty missed </small>
 				<small style="color:#e9b739" ng-if="event.value == 'Saved'">Penalty saved </small>
 				<small style="color:#439e4e" ng-if="event.value == 'Scored'">Penalty scored </small>

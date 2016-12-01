@@ -6,3 +6,80 @@ a {
 
 	color: #FFFFFF;
 }
+
+/*
+*	Detail Tabs
+*/
+
+.match-details ul {
+
+	display:inline-block;
+}
+.match-details a:link {
+
+	color: #182222;
+}
+
+.match-details a:hover {
+	
+	color: #FFFFFF;
+}
+
+/**
+*	Information Tab
+**/
+
+.information-tab h3 {
+
+	color: #f57d09;
+}
+
+/**
+*	Team1 Tab
+**/
+
+.team-one-tab h3 {
+
+	color: #f57d09;
+}
+
+.team-one-tab .penalty-results p {
+
+	font-size: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.team-one-tab img {
+
+	max-width: 15px;
+	display:inline-block;
+}
+
+/**
+*	Team2 Tab
+**/
+.team-two-tab h3 {
+
+	color: #f57d09;
+}
+
+.team-two-tab .penalty-results p {
+
+	font-size: 15px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.team-two-tab img {
+
+	max-width: 15px;
+	display:inline-block;
+}
+
+/*
+*	Events Tab
+*/
+.events-tab {
+	
+}

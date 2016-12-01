@@ -1,6 +1,6 @@
 var app = angular.module ("mikesApp", ["ngRoute"]).run (function ($rootScope, $http, $location, authenticationService) {
 
-	$rootScope.appName = "Mike's awesome app";
+	$rootScope.appName = "Mikes Sportdec app";
 	//	Keep track of authentication
 	$rootScope.isAuthenticated = false;
 	$rootScope.currentUser = '';

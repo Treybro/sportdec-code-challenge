@@ -1,11 +1,69 @@
 <div class="jumbotron matches-jumbotron" ng-show="$root.isAuthenticated">
-	<h1 class="text-center">Latest Results</h1>
+	<h1>Latest Results</h1>
 	<div class="panel panel-default" ng-repeat="match in latestMatches | orderBy:'-date'">
 		<div class="panel-body">
-			<h3 class="text-center">{{match.name}}</h3>
-			<h4 class="text-center">{{match.team_data[0].score}} : {{match.team_data[1].score}}</h4>
-			<h4 class="text-center">{{match.date | date:'d/M/yy h:mm a'}}</h4>
-			<h4 class="text-center"><a data-toggle="collapse" data-target="#match-details-{{match._id}}" ng-click="viewMatchDetails (match)">Details</a></h4>
+			<div class="row">
+				<div class="col-md-5" ng-switch on="match.team_data[0].name">
+					<img src="images/crests/arsenal.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Arsenal">
+					<img src="images/crests/bournemouth.png" class="img-responsive sportsdec-team-logo" ng-switch-when="AFC Bournemouth">
+					<img src="images/crests/crystalpalace.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Crystal Palace">
+					<img src="images/crests/everton.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Everton">
+					<img src="images/crests/hull.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Hull City">
+					<img src="images/crests/leicester.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Leicester City">
+					<img src="images/crests/manchestercity.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Manchester City">
+					<img src="images/crests/manchesterunited.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Manchester United">
+					<img src="images/crests/southampton.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Southhampton">
+					<img src="images/crests/stoke.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Stoke City">
+					<img src="images/crests/swansea.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Swansea City">
+					<img src="images/crests/sunderland.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Sunderland">
+					<img src="images/crests/tottenham.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Tottenham Hotspur">
+					<img src="images/crests/westbrom.png" class="img-responsive sportsdec-team-logo" ng-switch-when="West Bromwich Albion">
+					<img src="images/crests/burnley.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Watford">
+					<img src="images/crests/blackburnrovers.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Blackburn Rovers">
+					<img src="images/crests/liverpool.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Oldham Athletic">
+					<img src="images/crests/burnley.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Burnley">
+					<img src="images/crests/middlesbrough.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Middlesbrough">
+					<img src="images/crests/westham.png" class="img-responsive sportsdec-team-logo" ng-switch-when="West Ham United">
+					<h3>{{match.team_data[0].name}}</h3>
+				</div>
+				<div class="col-md-2">
+					<p>
+						<h3>VS</h3>
+						<span ng-if="match.team_data[0].score > match.team_data[1].score" class="winning-score">{{match.team_data[0].score}}  </span>
+						<span ng-if="match.team_data[0].score == match.team_data[1].score" class="drawing-score">{{match.team_data[0].score}}  </span>
+						<span ng-if="match.team_data[0].score < match.team_data[1].score" class="losing-score">{{match.team_data[0].score}}  </span>
+						<span>  -  </span>
+						<span ng-if="match.team_data[1].score > match.team_data[0].score" class="winning-score">{{match.team_data[1].score}}</span>
+						<span ng-if="match.team_data[1].score == match.team_data[0].score" class="drawing-score">{{match.team_data[1].score}}  </span>
+						<span ng-if="match.team_data[1].score < match.team_data[0].score" class="losing-score">{{match.team_data[1].score}}</span>
+						<h4>{{match.date | date:'d/M/yy h:mm a'}}</h4>
+					</p>
+				</div>
+				<div class="col-md-5" ng-switch on="match.team_data[1].name">
+					<img src="images/crests/arsenal.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Arsenal">
+					<img src="images/crests/bournemouth.png" class="img-responsive sportsdec-team-logo" ng-switch-when="AFC Bournemouth">
+					<img src="images/crests/crystalpalace.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Crystal Palace">
+					<img src="images/crests/everton.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Everton">
+					<img src="images/crests/hull.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Hull City">
+					<img src="images/crests/leicester.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Leicester City">
+					<img src="images/crests/manchestercity.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Manchester City">
+					<img src="images/crests/manchesterunited.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Manchester United">
+					<img src="images/crests/southampton.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Southhampton">
+					<img src="images/crests/stoke.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Stoke City">
+					<img src="images/crests/swansea.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Swansea City">
+					<img src="images/crests/sunderland.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Sunderland">
+					<img src="images/crests/tottenham.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Tottenham Hotspur">
+					<img src="images/crests/westbrom.png" class="img-responsive sportsdec-team-logo" ng-switch-when="West Bromwich Albion">
+					<img src="images/crests/burnley.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Watford">
+					<img src="images/crests/blackburnrovers.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Blackburn Rovers">
+					<img src="images/crests/oldham.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Oldham Athletic">
+					<img src="images/crests/burnley.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Burnley">
+					<img src="images/crests/middlesbrough.png" class="img-responsive sportsdec-team-logo" ng-switch-when="Middlesbrough">
+					<img src="images/crests/westham.png" class="img-responsive sportsdec-team-logo" ng-switch-when="West Ham United">
+					<h3>{{match.team_data[1].name}}</h3>
+				</div>
+			</div>
+			<h4><a class="more-details-option" data-toggle="collapse" data-target="#match-details-{{match._id}}" ng-click="viewMatchDetails (match)">Details</a></h4>
 			<mikes-match-details-component match-data="match" match-details-data="matchDetails"></mikes-match-details-component>
 		</div>
 	</div>

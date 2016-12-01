@@ -1,52 +1,35 @@
 <div class="col-md-12">
-	<p class="text-center">
-		<small style="color:#f57d09">Side</small>
-		<br>
-		<small>{{$ctrl.tabMatchDetailsData.team_data[0].side}}</small>
-	</p>
+	<h3>Side</h3>
+	<h4>{{$ctrl.tabMatchDetailsData.team_data[0].side}}</h4>
 </div>
 <div class="col-md-12">
-	<p class="text-center">
-		<small style="color:#f57d09">Score</small>
-		<br>
-		<small>{{$ctrl.tabMatchDetailsData.team_data[0].score}}</small>
-	</p>
+	<h3>Score</h3>
+	<h4>{{$ctrl.tabMatchDetailsData.team_data[0].score}}</h4>
 </div>
 <div class="col-md-12">
-	<p class="text-center">
-		<small style="color:#f57d09">Half Time Score</small>
-		<br>
-		<small>{{$ctrl.tabMatchDetailsData.team_data[0].halfscore}}</small>
-	</p>
+	<h3>Half Time Score</h3>
+	<h4>{{$ctrl.tabMatchDetailsData.team_data[0].halfscore}}</h4>
 </div>
 <div class="col-md-12">
-	<p class="text-center">
-		<small style="color:#f57d09">Final Whistle Score</small>
-		<br>
-		<small>{{$ctrl.tabMatchDetailsData.team_data[0].ninetyscore}}</small>
-	</p>
+	<h3>Final Whistle Score</h3>
+	<h4>{{$ctrl.tabMatchDetailsData.team_data[0].ninetyscore}}</h4>
 </div>
 <div class="col-md-12">
-	<p class="text-center">
-		<small style="color:#f57d09">Penalties Scored</small>
-		<br>
-		<small>{{$ctrl.tabMatchDetailsData.team_data[0].shootoutscore}}</small>
-	</p>
+	<h3>Penalties Scored</h3>
+	<h4>{{$ctrl.tabMatchDetailsData.team_data[0].shootoutscore}}</h4>
 </div>
 <div class="col-md-12">
-	<p class="text-center">
-		<small style="color:#f57d09">Penalty Results</small>
-		<br>
-		<span ng-repeat="penalty in $ctrl.tabMatchDetailsData.team_data[0].shootout track by $index">
-			<small>{{penalty}}</small>
-			<br>
-		</span>
-	</p>
+	<h3>Penalty Results</h3>
+	<div class="penalty-results" ng-repeat="penalty in $ctrl.tabMatchDetailsData.team_data[0].shootout track by $index">
+		<p>
+			{{penalty}}
+			<img class="img-responsive" src="images/icons/penaltyscored.png" ng-if="penalty == 'Scored'"/>
+			<img class="img-responsive" src="images/icons/owngoal.png" ng-if="penalty == 'Saved'"/>
+			<img class="img-responsive" src="images/icons/penaltymissed.png" ng-if="penalty == 'Missed'"/>
+		</p>
+	</div>
 </div>
 <div class="col-md-12">
-	<p class="text-center">
-		<small style="color:#f57d09">Squad</small>
-		<br>
-		<small>{{$ctrl.tabMatchDetailsData.team_data[0].num_players}}</small>
-	</p>
+	<h3>Squad</h3>
+	<h4>{{$ctrl.tabMatchDetailsData.team_data[0].num_players}}</h4>
 </div>

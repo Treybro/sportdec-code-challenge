@@ -6,10 +6,12 @@
          "date":1478633400000,
          "team_data":[
             {
-               "score":"2"
+               "score":"2",
+               "name":"Blackburn Rovers"
             },
             {
-               "score":"2"
+               "score":"2",
+               "name":"Oldham Athletic"
             }
          ]
       },
@@ -19,10 +21,12 @@
          "date":1478547000000,
          "team_data":[
             {
-               "score":"2"
+               "score":"2",
+               "name":"AFC Bournemouth"
             },
             {
-               "score":"6"
+               "score":"6",
+               "name":"Everton"
             }
          ]
       },
@@ -32,10 +36,12 @@
          "date":1478460600000,
          "team_data":[
             {
-               "score":"4"
+               "score":"4",
+               "name":"Arsenal"
             },
             {
-               "score":"1"
+               "score":"1",
+               "name":"Hull City"
             }
          ]
       },
@@ -45,10 +51,12 @@
          "date":1478374200000,
          "team_data":[
             {
-               "score":"3"
+               "score":"3",
+               "name":"Burnley"
             },
             {
-               "score":"1"
+               "score":"1",
+               "name":"Leicester City"
             }
          ]
       },
@@ -58,10 +66,12 @@
          "date":1478287800000,
          "team_data":[
             {
-               "score":"0"
+               "score":"0",
+               "name":"Crystal Palace"
             },
             {
-               "score":"0"
+               "score":"0",
+               "name":"Manchester City"
             }
          ]
       },
@@ -71,10 +81,12 @@
          "date":1478201400000,
          "team_data":[
             {
-               "score":"2"
+               "score":"2",
+               "name":"Manchester United"
             },
             {
-               "score":"0"
+               "score":"0",
+               "name":"Swansea City"
             }
          ]
       },
@@ -84,10 +96,12 @@
          "date":1478115000000,
          "team_data":[
             {
-               "score":"2"
+               "score":"2",
+               "name":"Middlesbrough"
             },
             {
-               "score":"4"
+               "score":"4",
+               "name":"Tottenham Hotspur"
             }
          ]
       },
@@ -97,10 +111,12 @@
          "date":1478028600000,
          "team_data":[
             {
-               "score":"0"
+               "score":"0",
+               "name":"Southhampton"
             },
             {
-               "score":"3"
+               "score":"3",
+               "name":"Watford"
             }
          ]
       },
@@ -110,10 +126,12 @@
          "date":1477942200000,
          "team_data":[
             {
-               "score":"1"
+               "score":"1",
+               "name":"Stoke City"
             },
             {
-               "score":"2"
+               "score":"2",
+               "name":"West Bromwich Albion"
             }
          ]
       },
@@ -123,23 +141,12 @@
          "date":1477855800000,
          "team_data":[
             {
-               "score":"1"
+               "score":"1",
+               "name":"Sunderland"
             },
             {
-               "score":"1"
-            }
-         ]
-      },
-      {
-         "_id":9,
-         "name":"Aberdeen vs Celtic",
-         "date":1477765800000,
-         "team_data":[
-            {
-               "score":"4"
-            },
-            {
-               "score":"1"
+               "score":"1",
+               "name":"West Ham United"
             }
          ]
       }

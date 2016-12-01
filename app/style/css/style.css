@@ -1,3 +1,6 @@
+/*
+*	Main body
+*/
 body {
 
 	padding-top: 40px;
@@ -5,6 +8,9 @@ body {
 	background-color: #eee;
 }
 
+/*
+*	Main Jumbotron (login/signup)
+*/
 .jumbotron a:link {
 
 	text-decoration: none;

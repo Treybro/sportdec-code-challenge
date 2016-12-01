@@ -1,4 +1,4 @@
-<div class="collapse" id="match-details-{{$ctrl.matchData._id}}">
+<div class="collapse match-details" id="match-details-{{$ctrl.matchData._id}}">
 	<ul class="nav nav-tabs">
 		<li class="active">
 			<a toggle-tab="" data-toggle="tab" href="#match-details-{{$ctrl.matchData._id}}-info">Match Info</a>
@@ -14,16 +14,16 @@
 		</li>
 	</ul>
 	<div class="tab-content">
-		<div id="match-details-{{$ctrl.matchData._id}}-info" class="tab-pane fade in active row">
+		<div id="match-details-{{$ctrl.matchData._id}}-info" class="tab-pane fade in active row information-tab">
 			<mikes-info-tab-component tab-match-data="$ctrl.matchData" tab-match-details-data="$ctrl.matchDetailsData"></mikes-info-tab-component>
 		</div>
-		<div id="match-details-{{$ctrl.matchData._id}}-events" class="tab-pane fade">
+		<div id="match-details-{{$ctrl.matchData._id}}-events" class="tab-pane fade events-tab">
 			<mikes-events-tab-component tab-match-data="$ctrl.matchData" tab-match-details-data="$ctrl.matchDetailsData"></mikes-events-tab-component>
 		</div>
-		<div id="match-details-{{$ctrl.matchData._id}}-team1" class="tab-pane fade">
+		<div id="match-details-{{$ctrl.matchData._id}}-team1" class="tab-pane fade team-one-tab">
 			<mikes-team1-tab-component tab-match-data="$ctrl.matchData" tab-match-details-data="$ctrl.matchDetailsData"></mikes-team1-tab-component>
 		</div>
-		<div id="match-details-{{$ctrl.matchData._id}}-team2" class="tab-pane fade">
+		<div id="match-details-{{$ctrl.matchData._id}}-team2" class="tab-pane fade team-two-tab">
 			<mikes-team2-tab-component tab-match-data="$ctrl.matchData" tab-match-details-data="$ctrl.matchDetailsData"></mikes-team2-tab-component>
 		</div>
 	</div>
