@@ -13,7 +13,7 @@ module.exports = function(grunt) {
             scripts: {
 
                 files: ['app/style/sass/*.scss'],
-                tasks: ['sass','cssmin'],
+                tasks: ['sass','concat','cssmin'],
                 options: {
 
                     spawn: false,
@@ -35,6 +35,18 @@ module.exports = function(grunt) {
             }
         },
 
+        /**
+        *   Concat all CSS files into one large CSS file
+        */
+        concat: {
+
+            dist: {
+
+                src: ['app/style/css/forms.css', 'app/style/css/matchdetails.css', 'app/style/css/matches.css', 'app/style/css/style.css'],
+                dest: 'app/style/css/appstyles.css',
+            },
+        },
+
         /*
         *   cssmin task minifies converted scss/css files
         *   and places them to the public directory for production access
@@ -44,7 +56,7 @@ module.exports = function(grunt) {
                 files: [{
                     expand: true,
                     cwd: 'app/style/css',
-                    src: ['*.css', '!*.min.css'],
+                    src: ['appstyles.css'],
                     dest: 'public/stylesheets',
                     ext: '.min.css'
                 }]
@@ -57,6 +69,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-concat');
 
     //  Default Tasks
     grunt.registerTask ('default', ["sass", "cssmin"]);
