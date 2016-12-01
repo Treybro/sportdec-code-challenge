@@ -11,23 +11,16 @@
 	<h4>{{$ctrl.tabMatchDetailsData.team_data[0].halfscore}}</h4>
 </div>
 <div class="col-md-12">
-	<h3>Final Whistle Score</h3>
+	<h3>Final Score</h3>
 	<h4>{{$ctrl.tabMatchDetailsData.team_data[0].ninetyscore}}</h4>
 </div>
 <div class="col-md-12">
-	<h3>Penalties Scored</h3>
-	<h4>{{$ctrl.tabMatchDetailsData.team_data[0].shootoutscore}}</h4>
-</div>
-<div class="col-md-12">
-	<h3>Penalty Results</h3>
-	<div class="penalty-results" ng-repeat="penalty in $ctrl.tabMatchDetailsData.team_data[0].shootout track by $index">
-		<p>
-			{{penalty}}
-			<img class="img-responsive" src="images/icons/penaltyscored.png" ng-if="penalty == 'Scored'"/>
-			<img class="img-responsive" src="images/icons/owngoal.png" ng-if="penalty == 'Saved'"/>
-			<img class="img-responsive" src="images/icons/penaltymissed.png" ng-if="penalty == 'Missed'"/>
-		</p>
-	</div>
+	<h3>Penalties</h3>
+	<span class="penalty-results" ng-repeat="penalty in $ctrl.tabMatchDetailsData.team_data[0].shootout track by $index">
+		<img class="img-responsive" src="images/icons/penaltyscored.png" ng-if="penalty == 'Scored'" data-toggle="tooltip" data-placement="top" title="Penalty Scored"/>
+		<img class="img-responsive" src="images/icons/owngoal.png" ng-if="penalty == 'Saved'" data-toggle="tooltip" data-placement="top" title="Penalty Saved"/>
+		<img class="img-responsive" src="images/icons/penaltymissed.png" ng-if="penalty == 'Missed'" data-toggle="tooltip" data-placement="top" title="Penalty Missed"/>
+	</span>
 </div>
 <div class="col-md-12">
 	<h3>Squad</h3>

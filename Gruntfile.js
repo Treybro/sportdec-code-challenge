@@ -4,24 +4,41 @@ module.exports = function(grunt) {
     grunt.initConfig({
 
         pkg: grunt.file.readJSON('package.json'),
+
+        /**
+        *   Watch task only listens for updates on the .scss files
+        *   Runs the SASS and CSSMIN tasks on event
+        */
         watch: {
             scripts: {
 
-                files: ['app/style/css/*.css'],
-                tasks: ['cssmin'],
+                files: ['app/style/sass/*.scss'],
+                tasks: ['sass','cssmin'],
                 options: {
 
                     spawn: false,
                 },
             },
         },
+
+        /**
+        *   Sass task converts .scss files into css files
+        */
         sass: {
             dist: {
                 files: {
-                    'app/style/sass/sassconverted.css' : 'app/style/sass/sass.scss'
+                    'app/style/css/forms.css' : 'app/style/sass/forms.scss',
+                    'app/style/css/matchdetails.css' : 'app/style/sass/matchdetails.scss',
+                    'app/style/css/matches.css' : 'app/style/sass/matches.scss',
+                    'app/style/css/style.css' : 'app/style/sass/style.scss'
                 }
             }
         },
+
+        /*
+        *   cssmin task minifies converted scss/css files
+        *   and places them to the public directory for production access
+        */
         cssmin: {
             target: {
                 files: [{
@@ -42,5 +59,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
 
     //  Default Tasks
-    grunt.registerTask ('default', ["uglify", "cssmin", "sass"]);
+    grunt.registerTask ('default', ["sass", "cssmin"]);
 }

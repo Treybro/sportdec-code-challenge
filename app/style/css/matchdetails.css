@@ -1,85 +1,40 @@
-.kick-off {
-	text-decoration: underline;
-}
-
-a {
-
-	color: #FFFFFF;
-}
-
-/*
-*	Detail Tabs
+/**
+*
+*	Variables for SportsDec App
+*
 */
-
 .match-details ul {
-
-	display:inline-block;
-}
+  display: inline-block; }
 .match-details a:link {
-
-	color: #182222;
-}
-
+  color: #182222; }
 .match-details a:hover {
-	
-	color: #FFFFFF;
-}
-
-/**
-*	Information Tab
-**/
-
-.information-tab h3 {
-
-	color: #f57d09;
-}
-
-/**
-*	Team1 Tab
-**/
+  color: #FFFFFF; }
 
 .team-one-tab h3 {
-
-	color: #f57d09;
-}
-
-.team-one-tab .penalty-results p {
-
-	font-size: 15px;
-	margin: 0px;
-	padding: 0px;
-}
-
+  color: #f57d09; }
 .team-one-tab img {
+  max-width: 30px;
+  display: inline-block; }
 
-	max-width: 15px;
-	display:inline-block;
-}
-
-/**
-*	Team2 Tab
-**/
 .team-two-tab h3 {
-
-	color: #f57d09;
-}
-
-.team-two-tab .penalty-results p {
-
-	font-size: 15px;
-	margin: 0px;
-	padding: 0px;
-}
-
+  color: #f57d09; }
 .team-two-tab img {
+  max-width: 30px;
+  display: inline-block; }
 
-	max-width: 15px;
-	display:inline-block;
-}
+.events-tab h3 {
+  color: #f57d09; }
+.events-tab img {
+  max-width: 15px;
+  display: inline-block; }
+.events-tab .home-side {
+  text-align: left; }
+.events-tab .away-side {
+  text-align: right; }
+.events-tab .event p {
+  font-size: 15px; }
 
-/*
-*	Events Tab
-*/
-.events-tab {
-	
-}
+.information-tab h3 {
+  color: #f57d09; }
+
+/*# sourceMappingURL=matchdetails.css.map */

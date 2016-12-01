@@ -1,0 +1,44 @@
+//	Import Variables
+@import "variables";
+
+.matches-jumbotron {
+	text-align: center;
+	h3 {
+		font-size: 21px;
+		margin: 5px;
+	}
+	h4 {
+		font-size: 15px;
+		margin: 5px;
+	}
+	span {
+		font-size: 50px;
+	}
+	.winning-score {
+		color: $sportsdec-color-green;
+	}
+	.losing-score {
+		color: $sportsdec-color-red;
+	}
+	.drawing-score {
+		color: $sportsdec-color-yellow;
+	}
+}
+h1 {
+	font-size: 21px;
+	margin: 5px;
+}
+.sportsdec-team-logo {
+	max-width: 100px;
+	max-height: 100px;
+	display: block;
+	margin: 0 auto;
+}
+.more-details-option {
+	color: $sportsdec-color-orange-dark;
+	text-decoration: none;
+	&:hover {
+		color: $sportsdec-color-orange-light;
+		text-decoration: none;
+	}
+}

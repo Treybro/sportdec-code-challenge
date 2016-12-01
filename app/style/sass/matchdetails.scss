@@ -1,0 +1,55 @@
+//	Import Variables
+@import "variables";
+
+.match-details {
+	ul {
+		display: inline-block;
+	}
+	a {
+		&:link {
+			color: $sportsdec-color-grey-dark;
+		}
+		&:hover {
+			color: $sportsdec-color-white;
+		}
+	}
+}
+.team-one-tab {
+	h3 {
+		color: $sportsdec-color-orange-dark;
+	}
+	img {
+		max-width: 30px;
+		display: inline-block;
+	}
+}
+.team-two-tab {
+	h3 {
+		color: $sportsdec-color-orange-dark;
+	}
+	img {
+		max-width: 30px;
+		display: inline-block;
+	}
+}
+.events-tab {
+	h3 {
+		color: $sportsdec-color-orange-dark;
+	}
+	img {
+		max-width: 15px;
+		display: inline-block;
+	}
+	.home-side {
+		text-align: left;
+	}
+	.away-side {
+		text-align: right;
+	}
+	.event p {
+		font-size: 15px;
+	}
+}
+.information-tab h3 {
+	color: $sportsdec-color-orange-dark;
+}

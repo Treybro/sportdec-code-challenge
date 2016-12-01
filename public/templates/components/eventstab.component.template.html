@@ -1,62 +1,118 @@
 <div class="events" ng-repeat="event in $ctrl.tabMatchDetailsData.events | orderBy:'timestamp'">
 	<div class="row" ng-switch on="event.category">
 		<div class="col-md-12" ng-switch-when="period_change">
-			<p ng-if="event.value == 'first_half'">
-				<small style="color:#f57d09">Kick Off</small>
-				<small>{{event.timestamp | date:'h:mm a'}}</small>
-			</p>
-			<png-if="event.value == 'half_time'">
-				<small style="color:#f57d09">Half Time</small>
-				<small>{{event.timestamp | date:'h:mm a'}}</small>
-			</p>
-			<p ng-if="event.value == 'second_half'">
-				<small style="color:#f57d09">Second Half</small>
-				<small>{{event.timestamp | date:'h:mm a'}}</small>
-			</p>
-			<p ng-if="event.value == '90_mins'">
-				<small style="color:#f57d09">Final Whistle</small>
-				<small>{{event.timestamp | date:'h:mm a'}}</small>
-			</p>
+			<div class="event" ng-if="event.value == 'first_half'">
+				<h3>First Half</h3>
+				<p>
+					{{event.timestamp | date:'h:mm a'}}
+					<img class="img-responsive" src="images/icons/whistle.png">
+				</p>
+			</div>
+			<div class="event" ng-if="event.value == 'half_time'">
+				<h3>Half Time</h3>
+				<p>
+					{{event.timestamp | date:'h:mm a'}}
+					<img class="img-responsive" src="images/icons/whistle.png">
+				</p>
+			</div>
+			<div class="event" ng-if="event.value == 'second_half'">
+				<h3>Second Half</h3>
+				<p>
+					{{event.timestamp | date:'h:mm a'}}
+					<img class="img-responsive" src="images/icons/whistle.png">
+				</p>
+			</div>
+			<div class="event" ng-if="event.value == '90_mins'">
+				<h3>Final Whistle</h3>
+				<p>
+					{{event.timestamp | date:'h:mm a'}}
+					<img class="img-responsive" src="images/icons/whistle.png">
+				</p>
+			</div>
 		</div>
 		<div class="col-md-12" ng-switch-when="goal">
-			<p>
-				<small style="color:#439e4e">Goal</small>
-				<small>scored by {{event.label}}</small>
-				<small>@{{event.time}} min</small>
-			</p>
+			<div class="event home-side col-md-5 col-md-offset-2" ng-if="event.side == 'home'">
+				<p>
+					<img class="img-responsive" src="images/icons/goal.png" data-toggle="tooltip" data-placement="top" title="Goal">
+					{{event.label}}
+					min {{event.time}}
+				</p>
+			</div>
+			<div class="event away-side col-md-10" ng-if="event.side == 'away'">
+				<p>
+					{{event.label}}
+					min {{event.time}}
+					<img class="img-responsive" src="images/icons/goal.png" data-toggle="tooltip" data-placement="top" title="Goal">
+				</p>
+			</div>
 		</div>
 		<div class="col-md-12" ng-switch-when="substitution_on">
-			<p>
-				<small style="color:#439e4e">Sub On</small>
-				<small>{{event.label}}</small>
-				<small>@{{event.time}} min</small>
-			</p>
+			<div class="event home-side col-md-5 col-md-offset-2" ng-if="event.side == 'home'">
+				<p>
+					<img class="img-responsive" src="images/icons/subon.png" data-toggle="tooltip" data-placement="top" title="Sub On">
+					{{event.label}}
+					min {{event.time}}
+				</p>
+			</div>
+			<div class="event away-side col-md-10" ng-if="event.side == 'away'">
+				<p>
+					{{event.label}}
+					min {{event.time}}
+					<img class="img-responsive" src="images/icons/subon.png" data-toggle="tooltip" data-placement="top" title="Sub On">
+				</p>
+			</div>
 		</div>
 		<div class="col-md-12" ng-switch-when="substitution_off">
-			<p>
-				<small style="color:#d03020">Sub Off</small>
-				<small>{{event.label}}</small>
-				<small>@{{event.time}} min</small>
-			</p>
+			<div class="event home-side col-md-5 col-md-offset-2" ng-if="event.side == 'home'">
+				<p>
+					<img class="img-responsive" src="images/icons/suboff.png" data-toggle="tooltip" data-placement="top" title="Sub Off">
+					{{event.label}}
+					{{event.time}} min
+				</p>
+			</div>
+			<div class="event away-side col-md-10" ng-if="event.side == 'away'">
+				<p>
+					{{event.label}}
+					min {{event.time}}
+					<img class="img-responsive" src="images/icons/suboff.png" data-toggle="tooltip" data-placement="top" title="Sub Off">
+				</p>
+			</div>
 		</div>
 		<div class="col-md-12" ng-switch-when="booking">
-			<p>
-				<small style="color:#e9b739" ng-if="event.value == 'Yellow'">Yellow Card</small>
-				<small style="color:#d03020" ng-if="event.value == 'Red'">Red Card</small>
-				<small>{{event.label}}</small>
-				<small>@{{event.time}} min</small>
-			</p>
+			<div class="event home-side col-md-5 col-md-offset-2" ng-if="event.side == 'home'">
+				<p>
+					<img class="img-responsive" src="images/icons/yellowcard.png" ng-if="event.value == 'Yellow'" data-toggle="tooltip" data-placement="top" title="Yellow Card">
+					<img class="img-responsive" src="images/icons/redcard.png" ng-if="event.value == 'Red'" data-toggle="tooltip" data-placement="top" title="Red Card">
+					{{event.label}}
+					{{event.time}} min
+				</p>
+			</div>
+			<div class="event away-side col-md-10" ng-if="event.side == 'away'">
+				<p>
+					{{event.label}}
+					min {{event.time}}
+					<img class="img-responsive" src="images/icons/yellowcard.png" ng-if="event.value == 'Yellow'" data-toggle="tooltip" data-placement="top" title="Yellow Card">
+					<img class="img-responsive" src="images/icons/redcard.png" ng-if="event.value == 'Red'" data-toggle="tooltip" data-placement="top" title="Red Card">
+				</p>
+			</div>
 		</div>
 		<div class="col-md-12" ng-switch-when="penaltyshot">
-			<p>
-				<small style="color:#d03020" ng-if="event.value == 'Missed'">Penalty missed </small>
-				<small style="color:#e9b739" ng-if="event.value == 'Saved'">Penalty saved </small>
-				<small style="color:#439e4e" ng-if="event.value == 'Scored'">Penalty scored </small>
-				<small>by {{event.label}}</small>
-			</p>
-		</div>
-		<div class="col-md-12" ng-switch-default>
-			<h5>I FORGOT A VALUE!</h5>
+			<div class="event home-side col-md-5 col-md-offset-2" ng-if="event.side == 'home'">
+				<p>
+					<img class="img-responsive" src="images/icons/penaltymissed.png" ng-if="event.value == 'Missed'" data-toggle="tooltip" data-placement="top" title="Penalty Missed">
+					<img class="img-responsive" src="images/icons/owngoal.png" ng-if="event.value == 'Saved'" data-toggle="tooltip" data-placement="top" title="Penalty Saved">
+					<img class="img-responsive" src="images/icons/penaltyscored.png" ng-if="event.value == 'Scored'" data-toggle="tooltip" data-placement="top" title="Penalty Scored">
+					{{event.label}}
+				</p>
+			</div>
+			<div class="event away-side col-md-10" ng-if="event.side == 'away'">
+				<p>
+					{{event.label}}
+					<img class="img-responsive" src="images/icons/penaltymissed.png" ng-if="event.value == 'Missed'" data-toggle="tooltip" data-placement="top" title="Penalty Missed">
+					<img class="img-responsive" src="images/icons/owngoal.png" ng-if="event.value == 'Saved'" data-toggle="tooltip" data-placement="top" title="Penalty Saved">
+					<img class="img-responsive" src="images/icons/penaltyscored.png" ng-if="event.value == 'Scored'" data-toggle="tooltip" data-placement="top" title="Penalty Scored">
+				</p>
+			</div>
 		</div>
 	</div>
 </div>
