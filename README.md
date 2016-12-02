@@ -116,6 +116,7 @@ As angular can require templates for use in controllers, each compontent has it'
 ```
 
 ### GRUNT
+**SASS is required to successfully run grunt tasks.**
 Grunt was chosen as a task runner for this project. While developing this project, it is advised to run the following command within the root directory of this project.
 ```sh
 $ grunt watch
@@ -124,4 +125,4 @@ This task has been configured primarly to watch for changes made to .scss files 
  - SASS, converts scss files to separate css files
  - CONCAT, combines all css files into one css file
  - CSMIN, minifies all css files and re-locates files for production.
-FOr further information on Grunt tasks, you can checkout the gruntfile.js within the root directory of the application.
+For further information on Grunt tasks, you can checkout the gruntfile.js within the root directory of the application.
