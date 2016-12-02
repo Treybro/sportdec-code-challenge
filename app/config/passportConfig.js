@@ -92,4 +92,11 @@ module.exports = function (passport) {
 
         return bCrypt.hashSync (password, bCrypt.genSaltSync (10), null);
     };
+
+    //  Add a default user for testing
+    users["testuser"] = {
+
+        username: "testuser",
+        password: createHash ("testpassword"),
+    }
 };
