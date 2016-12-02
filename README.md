@@ -116,7 +116,7 @@ As angular can require templates for use in controllers, each compontent has it'
 ```
 
 ### GRUNT
-**SASS is required to successfully run grunt tasks.**
+**You must have SASS installed to successfully run grunt tasks.**
 Grunt was chosen as a task runner for this project. While developing this project, it is advised to run the following command within the root directory of this project.
 ```sh
 $ grunt watch
