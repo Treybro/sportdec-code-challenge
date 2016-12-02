@@ -36,3 +36,61 @@ Tests can be run with the following command
 ```sh
 $ npm test
 ```
+A default user has already been setup on the server so you can login instantly
+```sh
+Username : testuser
+Password : testpassword
+```
+Or you can register your own account.
+# RESTful API
+A RESTful API was created in node.js to allow communication with the server. The primary goal of this api is to enable the following features.
+ - Interact with the provided json match data file
+    - The API "spoofs" communicating to a mongo/mysql database. Currently the API, when called, reads information from the provided sampleMatchData.json file and returns the results
+ - Allow user authentication
+    - The API exposes authentication routes to allow users to register an account and login to the web application
+
+You can find all the route/controller javascript files related to the API within the following directory
+```sh
+-app
+--controllers
+---ApiController.js
+---AuthenticationController.js
+--routes
+---api.js
+---authentication.js
+---index.js
+```
+
+The data provided by the API can be found within the following directory
+```sh
+-app
+--data
+---sampleMatchData.js
+---sampleMatchesData.js
+```
+# Front End
+The majority of the front-end was developed using angular, css, html
+### Angular
+The web-application front end has been divided into many components and services which can be re-used throughout the project and can be found within the following directories
+```sh
+-public
+--javascripts
+---angular
+----components
+----services
+```
+The most important components are
+ - latestmatch.component.js
+    - this is responsible for retrieving information about a specific match from the API
+ - login.component.js
+    - this is responsible for the user login flow between the front-end form and the API
+ - navbar.component.js
+    - this is responsible for the login/logout options for the navigation bar
+ - signup.component.js 
+    - this handles the user signup process by communicating with the API
+
+Currently there are two services created in angular. These are responsible for communicating directly with the API. Most components utilize this service to perform their required tasks.
+ - authentication.service.js
+    - This handles all authentication http calls
+ - resources.service.js
+    -  This handles all data http calls
