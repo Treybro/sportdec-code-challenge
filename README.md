@@ -94,3 +94,34 @@ Currently there are two services created in angular. These are responsible for c
     - This handles all authentication http calls
  - resources.service.js
     -  This handles all data http calls
+
+### SASS,CSS,HTML
+Sass style sheets can be found within the following directory
+```sh
+-app
+--style
+---sass
+```
+This directory contains the _variables.scss file which is imported into all other sass files for use. A grunt-watch task has been configured to convert sass to css files whenever a change is made. These files are converted separately and import the _variables.scss file. The grunt-watch task is also configured to concatenate the resulting .css files into one .css file, which is finally minified for production use. This can be found within the following directory
+```sh
+-public
+--stylesheets
+---appstyles.min.css
+```
+As angular can require templates for use in controllers, each compontent has it's own unique HTML template. These templates can be found within the following directory.
+```sh
+-public
+--templates
+---components
+```
+
+### GRUNT
+Grunt was chosen as a task runner for this project. While developing this project, it is advised to run the following command within the root directory of this project.
+```sh
+$ grunt watch
+```
+This task has been configured primarly to watch for changes made to .scss files within the project. Once a change is made, the following tasks are also run.
+ - SASS, converts scss files to separate css files
+ - CONCAT, combines all css files into one css file
+ - CSMIN, minifies all css files and re-locates files for production.
+FOr further information on Grunt tasks, you can checkout the gruntfile.js within the root directory of the application.
